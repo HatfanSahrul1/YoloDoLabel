@@ -25,7 +25,7 @@ class Inference
 {
 public:
     Inference(const std::string &onnxModelPath, const cv::Size &modelInputShape = {640, 640}, const std::string &classesTxtFile = "", const bool &runWithCuda = true);
-    Inference(const std::string &onnxModelPath, const cv::Size &modelInputShape, const std::vector<std::string> &classes, const bool &runWithCuda)
+    Inference(const std::string &onnxModelPath, const cv::Size &modelInputShape, const std::vector<std::string> &classes, const bool &runWithCuda);
     std::vector<Detection> runInference(const cv::Mat &input);
 
 private:
