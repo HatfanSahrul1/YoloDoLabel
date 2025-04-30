@@ -16,7 +16,7 @@ class YoloAnnotator {
                       const std::string& datasetDir,
                       const std::string& outputDir,
                       const std::map<int, int>& classRemap,
-                      bool useCuda = true){}
+                      bool useCuda = true);
 
         YoloAnnotator(const DataLoader& dataLoader);
     
