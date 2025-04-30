@@ -1,0 +1,14 @@
+model_path: /home/user/models/feb25.onnx
+model_input_size: 320
+dataset_path: /home/user/dataset/
+output_dir: /home/user/dataset/
+model_config:
+  0:
+    label: "mobil"
+    remap: 0
+  1:
+    label: "lampu"
+    remap: 1
+  2:
+    label: "truk"
+    remap: 2
