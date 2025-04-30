@@ -11,12 +11,12 @@ class DataLoader {
 public:
     DataLoader(std::string config_file);
 
-    std::string GetModelPath();
-    int GetModelShape();
-    std::vector<std::string> GetModelClasses();
-    std::string GetDatasetPath();
-    std::string GetOutputPath();
-    std::map<int, int> GetClassRemap();
+    std::string GetModelPath() const;
+    int GetModelShape() const;
+    std::vector<std::string> GetModelClasses() const;
+    std::string GetDatasetPath() const;
+    std::string GetOutputPath() const;
+    std::map<int, int> GetClassRemap() const;
 
 private:
     int model_input_size;

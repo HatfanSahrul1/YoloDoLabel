@@ -4,7 +4,7 @@ DataLoader::DataLoader(std::string config_file){
     YAML::Node config = YAML::LoadFile(config_file);
     
     modelPath           = config["model_path"].as<std::string>();
-    model_input_size    = config["model_path"].as<int>();
+    model_input_size    = config["model_input_size"].as<int>();
     datasetDir          = config["dataset_path"].as<std::string>();
     outputDir           = config["output_dir"].as<std::string>();
 
@@ -22,26 +22,26 @@ DataLoader::DataLoader(std::string config_file){
     }
 }
 
-std::string DataLoader::GetModelPath(){
+std::string DataLoader::GetModelPath() const{
     return modelPath;
 }
 
-int DataLoader::GetModelShape(){
+int DataLoader::GetModelShape() const{
     return model_input_size;
 }
 
-std::string DataLoader::GetDatasetPath(){
+std::string DataLoader::GetDatasetPath() const{
     return datasetDir;
 }
 
-std::string DataLoader::GetOutputPath(){
+std::string DataLoader::GetOutputPath() const{
     return outputDir;
 }
 
-std::vector<std::string> DataLoader::GetModelClasses(){
+std::vector<std::string> DataLoader::GetModelClasses() const{
     return classes;
 }
 
-std::map<int, int> DataLoader::GetClassRemap(){
+std::map<int, int> DataLoader::GetClassRemap() const{
     return classRemap;
 }
