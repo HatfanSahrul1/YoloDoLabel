@@ -5,9 +5,11 @@
 #include <vector>
 #include <map>
 
+#include "yaml-cpp/yaml.h"
+
 class DataLoader {
 public:
-    DataLoader(std::string config);
+    DataLoader(std::string config_file);
 
     std::string GetModelPath();
     std::vector<std::string> GetModelClasses();
