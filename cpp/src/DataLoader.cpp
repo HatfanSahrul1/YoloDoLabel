@@ -3,9 +3,10 @@
 DataLoader::DataLoader(std::string config_file){
     YAML::Node config = YAML::LoadFile(config_file);
     
-    modelPath = config["model_path"].as<std::string>();
-    datasetDir = config["dataset_path"].as<std::string>();
-    outputDir = config["output_dir"].as<std::string>();
+    modelPath           = config["model_path"].as<std::string>();
+    model_input_size    = config["model_path"].as<int>();
+    datasetDir          = config["dataset_path"].as<std::string>();
+    outputDir           = config["output_dir"].as<std::string>();
 
     for(const auto& data : config["model_config"]){
         const auto& value = data.second;
@@ -23,6 +24,10 @@ DataLoader::DataLoader(std::string config_file){
 
 std::string DataLoader::GetModelPath(){
     return modelPath;
+}
+
+int DataLoader::GetModelShape(){
+    return model_input_size;
 }
 
 std::string DataLoader::GetDatasetPath(){
