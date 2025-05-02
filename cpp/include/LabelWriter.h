@@ -14,8 +14,8 @@ namespace fs = std::filesystem;
 
 class LabelWriter {
     public:
-        void write(const std::string& image_name, const std::vector<Detection>& detections, 
-                   const cv::Size& img_size, const LabelMapper& mapper, const std::string& save_dir);
+        static void write(const std::string& image_name, const std::vector<Detection>& detections, 
+                   const cv::Size& img_size, const LabelMapper& mapper, const std::string& outputDir);
 };
 
 #endif
