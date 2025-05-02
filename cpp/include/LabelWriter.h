@@ -3,10 +3,14 @@
 
 #include <iostream>
 #include <vector>
-#include <map>
+#include <fstream>
+#include <filesystem>
 
-#include "LabelMapper.h"
 #include "opencv2/opencv.hpp"
+#include "LabelMapper.h"
+#include "inference.h"
+
+namespace fs = std::filesystem;
 
 class LabelWriter {
     public:
