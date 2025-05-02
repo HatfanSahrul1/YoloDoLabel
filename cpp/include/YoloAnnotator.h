@@ -8,6 +8,7 @@
 #include "inference.h"
 #include "LabelMapper.h"
 #include "DataLoader.h"
+#include "DatasetLoader.h"
 
 class YoloAnnotator {
     public:
