@@ -21,7 +21,7 @@ class YoloAnnotator {
 
         YoloAnnotator(const DataLoader& dataLoader);
     
-        void run();
+        void Run();
     
     private:
         Inference inference;
