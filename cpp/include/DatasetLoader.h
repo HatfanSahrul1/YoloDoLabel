@@ -3,6 +3,10 @@
 
 #include <iostream>
 #include <vector>
+#include <filesystem>
+#include <algorithm>
+
+namespace fs = std::filesystem;
 
 class DatasetLoader {
     public:
