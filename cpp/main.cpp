@@ -6,10 +6,10 @@
 #include "include/DataLoader.h"
 
 int main() {
-    DataLoader dataLoader("/home/eros/clone/yoloDoLabel/cpp/config.yaml");
+    DataLoader dataLoader("/home/user/yoloDoLabel/cpp/config.yaml");
     YoloAnnotator yoloAnnotator(dataLoader);
 
     yoloAnnotator.Run();
-    
+
     return 0;
 }
